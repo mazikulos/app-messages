@@ -1,0 +1,30 @@
+.m-composeSection
+    --btn-size: 60px
+    --row-height: 27px
+    display: flex
+    align-items: flex-end
+    grid-gap: var(--gap)
+    width: 100%
+    &__textarea
+        flex: 1 1 auto
+        resize: none
+        border: 1px solid var(--color-gray)
+        min-height: var(--row-height)
+        padding: 2px var(--spacing)
+        line-height: 1.2
+        &:focus
+            outline: none
+    &__btn
+        cursor: pointer
+        margin-bottom: 0.3rem
+        background: none
+        border: none
+        flex: 0 1 var(--btn-size)
+        min-width: var(--btn-size)
+        display: flex
+        svg
+            transform: 0.1s
+            max-width: 100%
+            height: var(--row-height)
+        &:active
+            color: var(--color-secondary)
