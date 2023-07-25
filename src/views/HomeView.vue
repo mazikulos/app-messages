@@ -8,22 +8,22 @@
 import ConversationArea from '@/components/ConversationArea.vue'
 
 export default {
-  name: 'HomeView',
-  components: {
-    ConversationArea
-  },
-  computed: {
-    messages() {
-      return this.$store.getters.getMessages
+    name: 'HomeView',
+    components: {
+        ConversationArea
     },
-    messagesStatus() {
-      return this.$store.getters.getMessagesStatus
+    computed: {
+        messages() {
+            return this.$store.getters.getMessages
+        },
+        messagesStatus() {
+            return this.$store.getters.getMessagesStatus
+        }
+    },
+    created() {
+        this.$store.dispatch('fetchMessages')
+        this.$store.dispatch('fetchUser')
     }
-  },
-  created() {
-    this.$store.dispatch('fetchMessages')
-    this.$store.dispatch('fetchUser')
-  }
 }
 </script>
 

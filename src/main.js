@@ -10,7 +10,7 @@ import './assets/styles/main.sass'
 Vue.use(VTooltip)
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
